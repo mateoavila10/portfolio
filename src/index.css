@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+/*
+  Colores y tipografías del sitio.
+  Para cambiar la paleta, editá solo estas variables:
+  todo el sitio las usa a través de las clases de Tailwind (bg-bg, text-ink, text-accent, etc.).
+*/
+:root {
+  --color-bg: #f5f2ea;        /* fondo general (papel cálido) */
+  --color-surface: #fbf9f4;   /* fondo de tarjetas */
+  --color-ink: #1a1915;       /* texto principal */
+  --color-muted: #5c5a52;     /* texto secundario */
+  --color-line: #dcd7ca;      /* bordes y separadores */
+  --color-accent: #c2410c;    /* único color de acento */
+  --color-accent-ink: #ffffff;/* texto sobre el acento */
+
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+}
+
+/* Modo oscuro automático según la preferencia del sistema */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #141310;
+    --color-surface: #1c1b17;
+    --color-ink: #ece8de;
+    --color-muted: #a29e92;
+    --color-line: #34322b;
+    --color-accent: #f2884b;
+    --color-accent-ink: #141310;
+  }
+}
+
+/* Conecta las variables con Tailwind para poder usar clases como bg-surface o font-display */
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-line: var(--color-line);
+  --color-accent: var(--color-accent);
+  --color-accent-ink: var(--color-accent-ink);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* para que la nav fija no tape los títulos al saltar a una sección */
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+/* Foco visible y consistente para navegar con teclado */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Contenedor estándar de las secciones */
+.container-page {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px) {
+  .container-page { padding-inline: 2rem; }
+}
+
+/* Aparición suave al hacer scroll (la activa el componente <Reveal>) */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Diagrama del hero: puntos que viajan por las conexiones */
+.flow-line {
+  stroke-dasharray: 3 7;
+  animation: flow-dash 1.6s linear infinite;
+}
+@keyframes flow-dash {
+  to { stroke-dashoffset: -20; }
+}
+.flow-node {
+  animation: node-pulse 4.8s ease-in-out infinite;
+}
+@keyframes node-pulse {
+  0%, 70%, 100% { stroke: var(--color-line); }
+  10%, 25% { stroke: var(--color-accent); }
+}
+
+/* Estilos del contenido de los artículos (Markdown) */
+.prose-article { font-size: 1.0625rem; line-height: 1.75; }
+.prose-article > * + * { margin-top: 1.25em; }
+.prose-article h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem; line-height: 1.2; font-weight: 650;
+  margin-top: 2.2em; letter-spacing: -0.01em;
+}
+.prose-article h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem; font-weight: 600; margin-top: 1.8em;
+}
+.prose-article a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+.prose-article ul { list-style: disc; padding-left: 1.3em; }
+.prose-article ol { list-style: decimal; padding-left: 1.3em; }
+.prose-article li + li { margin-top: 0.4em; }
+.prose-article strong { font-weight: 650; }
+.prose-article blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1rem; color: var(--color-muted);
+}
+.prose-article code {
+  font-family: var(--font-mono); font-size: 0.88em;
+  background: var(--color-surface); border: 1px solid var(--color-line);
+  padding: 0.1em 0.35em; border-radius: 4px;
+}
+.prose-article pre {
+  font-family: var(--font-mono); font-size: 0.875rem; line-height: 1.6;
+  background: var(--color-surface); border: 1px solid var(--color-line);
+  padding: 1rem 1.15rem; border-radius: 10px; overflow-x: auto;
+}
+.prose-article pre code { background: none; border: 0; padding: 0; font-size: inherit; }
+.prose-article table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.prose-article th, .prose-article td { border-bottom: 1px solid var(--color-line); padding: 0.5rem 0.4rem; text-align: left; }
+
+/* Respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}

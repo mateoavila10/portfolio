@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# [COMPLETAR] cambiá el dominio si usás uno propio
+Sitemap: https://mateo-avila.vercel.app/sitemap.xml
