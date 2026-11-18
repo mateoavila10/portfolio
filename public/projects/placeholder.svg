@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <!-- Placeholder neutro para proyectos sin captura. Se adapta al modo claro u oscuro. -->
+  <style>
+    .line { stroke: #dcd7ca; } .win { fill: #fbf9f4; stroke: #dcd7ca; } .bar { fill: #e9e5da; } .dot { fill: #c2410c; }
+    @media (prefers-color-scheme: dark) {
+      .line { stroke: #2c2a24; } .win { fill: #1c1b17; stroke: #34322b; } .bar { fill: #2a2823; } .dot { fill: #f2884b; }
+    }
+  </style>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" class="line" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <!-- Ventana de navegador esquemática -->
+  <g transform="translate(150 90)">
+    <rect class="win" width="500" height="300" rx="14" stroke-width="1.5"/>
+    <circle class="dot" cx="24" cy="22" r="5"/>
+    <circle class="bar" cx="42" cy="22" r="5"/>
+    <circle class="bar" cx="60" cy="22" r="5"/>
+    <rect class="bar" x="0" y="44" width="500" height="1"/>
+    <rect class="bar" x="28" y="72" width="180" height="16" rx="4"/>
+    <rect class="bar" x="28" y="100" width="120" height="10" rx="3"/>
+    <rect class="bar" x="28" y="140" width="136" height="120" rx="8"/>
+    <rect class="bar" x="182" y="140" width="136" height="120" rx="8"/>
+    <rect class="bar" x="336" y="140" width="136" height="120" rx="8"/>
+  </g>
+</svg>
