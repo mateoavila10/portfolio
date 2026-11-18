@@ -4,10 +4,10 @@
 
 // Cada nodo: posición (x, y), título, detalle y el retraso de su animación
 const nodes = [
-  { x: 16, y: 16, step: '01', title: 'Mensaje', detail: 'WhatsApp · formulario', delay: '0s' },
+  { x: 16, y: 16, step: '01', title: 'Mensaje', detail: 'WhatsApp · web', delay: '0s' },
   { x: 234, y: 104, step: '02', title: 'Flujo', detail: 'n8n · Make', delay: '1.2s' },
-  { x: 16, y: 192, step: '03', title: 'IA', detail: 'clasifica y responde', delay: '2.4s', highlight: true },
-  { x: 234, y: 280, step: '04', title: 'App y datos', detail: 'React · Node · SQL', delay: '3.6s' },
+  { x: 16, y: 192, step: '03', title: 'IA', detail: 'clasifica · responde', delay: '2.4s', highlight: true },
+  { x: 234, y: 280, step: '04', title: 'App y datos', detail: 'React · SQL', delay: '3.6s' },
 ]
 
 const W = 150 // ancho de cada nodo

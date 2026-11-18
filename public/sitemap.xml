@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [COMPLETAR] Cambiá el dominio si usás uno propio. Al publicar un artículo nuevo, agregá su URL acá. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mateo-avila.vercel.app/</loc></url>
+  <url><loc>https://mateo-avila.vercel.app/blog</loc></url>
+  <url><loc>https://mateo-avila.vercel.app/blog/reservas-sin-solapamiento-padel</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://mateo-avila.vercel.app/blog/row-level-security-supabase-roles</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://mateo-avila.vercel.app/blog/importar-excel-datos-sucios</loc><lastmod>2026-11-10</lastmod></url>
+</urlset>

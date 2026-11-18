@@ -8,8 +8,8 @@ export default function Hero() {
     <section id="inicio" aria-labelledby="hero-title" className="container-page pb-20 pt-28 md:pb-28 md:pt-40">
       <div className="grid items-center gap-12 lg:grid-cols-[1.25fr_1fr] lg:gap-8">
         <div>
-          <p className="mb-6 flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.18em] text-muted">
-            <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
+          <p className="mb-6 flex items-start gap-2.5 font-mono text-xs uppercase tracking-[0.18em] text-muted">
+            <span className="mt-[0.3em] h-2 w-2 shrink-0 rounded-full bg-accent" aria-hidden="true" />
             {site.location} · {site.availability.toLowerCase()}
           </p>
 
