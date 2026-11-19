@@ -9,8 +9,7 @@ export const education = [
   {
     title: 'Técnico en Programación',
     place: 'UTN — Facultad Regional Tucumán',
-    // [COMPLETAR] año de egreso (o "En curso")
-    detail: '[COMPLETAR] año',
+    detail: 'Egresado en 2026',
   },
 ]
 

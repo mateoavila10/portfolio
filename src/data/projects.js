@@ -78,7 +78,7 @@ export const projects = [
     private: false,
     url: 'https://github.com/mateoavila10/Sinergia-Rent-a-Car',
     urlLabel: 'Ver código en GitHub',
-    image: '',
+    image: '/projects/sinergia-rent-a-car.webp',
   },
   {
     name: 'Strivo',
@@ -89,7 +89,9 @@ export const projects = [
     features: [],
     tags: ['Vercel'],
     private: false,
-    url: 'https://strivol.vercel.app',
+    // [COMPLETAR] https://strivol.vercel.app devolvía 404 (nov. 2026), por eso el botón está oculto.
+    // Cuando el sitio esté online, poné la URL correcta acá y vuelve a aparecer el botón.
+    url: '',
     urlLabel: 'Visitar sitio',
     image: '',
   },
