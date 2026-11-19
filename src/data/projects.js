@@ -80,19 +80,4 @@ export const projects = [
     urlLabel: 'Ver código en GitHub',
     image: '/projects/sinergia-rent-a-car.webp',
   },
-  {
-    name: 'Strivo',
-    pitch: 'Sitio web de Strivo, una empresa de automatizaciones con IA.',
-    description:
-      'Strivo convierte tareas repetitivas en sistemas automáticos para que los negocios funcionen más rápido y con menos errores. Diseña e implementa automatizaciones con IA que conectan las herramientas de cada negocio, para que los procesos corran sin depender de una persona.',
-    // [COMPLETAR] funciones del sitio y tecnologías con las que está hecho
-    features: [],
-    tags: ['Vercel'],
-    private: false,
-    // [COMPLETAR] https://strivol.vercel.app devolvía 404 (nov. 2026), por eso el botón está oculto.
-    // Cuando el sitio esté online, poné la URL correcta acá y vuelve a aparecer el botón.
-    url: '',
-    urlLabel: 'Visitar sitio',
-    image: '',
-  },
 ]
