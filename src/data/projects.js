@@ -82,9 +82,10 @@ export const projects = [
   },
   {
     name: 'Strivo',
-    pitch: 'Sitio web publicado en Vercel.',
-    // [COMPLETAR] ampliá la descripción, las funciones y las tecnologías de Strivo
-    description: '[COMPLETAR] Qué es Strivo, para quién es y qué problema resuelve.',
+    pitch: 'Sitio web de Strivo, una empresa de automatizaciones con IA.',
+    description:
+      'Strivo convierte tareas repetitivas en sistemas automáticos para que los negocios funcionen más rápido y con menos errores. Diseña e implementa automatizaciones con IA que conectan las herramientas de cada negocio, para que los procesos corran sin depender de una persona.',
+    // [COMPLETAR] funciones del sitio y tecnologías con las que está hecho
     features: [],
     tags: ['Vercel'],
     private: false,
