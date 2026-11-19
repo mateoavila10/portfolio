@@ -15,10 +15,12 @@ export default function HomePage() {
 
   // Cuando la URL trae un "#seccion" (por ejemplo desde la nav), scrolleamos hasta esa sección.
   // Usamos location.key para que funcione aunque se haga clic dos veces en el mismo enlace.
+  // Esperamos a que carguen las tipografías: si no, el hero cambia de alto después del scroll y queda corto.
   useEffect(() => {
     if (!location.hash) return
-    const element = document.getElementById(location.hash.slice(1))
-    if (element) element.scrollIntoView()
+    const scrollToSection = () => document.getElementById(location.hash.slice(1))?.scrollIntoView()
+    scrollToSection()
+    document.fonts?.ready.then(scrollToSection)
   }, [location.hash, location.key])
 
   return (
