@@ -28,7 +28,7 @@ export const projects = [
     private: true,
     url: '',
     urlLabel: '',
-    image: '',
+    image: '/projects/padel-saas.webp',
   },
   {
     name: 'Tucumán BB',
@@ -46,7 +46,7 @@ export const projects = [
     private: true,
     url: '',
     urlLabel: '',
-    image: '',
+    image: '/projects/tucuman-bb.webp',
   },
   {
     name: 'Panel de sucursales',
@@ -62,7 +62,7 @@ export const projects = [
     private: true,
     url: '',
     urlLabel: '',
-    image: '',
+    image: '/projects/panel-sucursales.webp',
   },
   {
     name: 'Sinergia Rent a Car',
