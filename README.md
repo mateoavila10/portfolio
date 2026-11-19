@@ -13,16 +13,15 @@ npm run build    # genera la versión final en la carpeta dist/
 npm run preview  # sirve dist/ para probar el build
 ```
 
-## Cómo desplegar en Vercel
+## Publicación
 
-1. Subí el proyecto a un repositorio de GitHub.
-2. En [vercel.com](https://vercel.com) → **Add New → Project** → importá el repositorio.
-3. Vercel detecta Vite solo. Si pregunta: build command `npm run build`, output directory `dist`.
-4. Deploy. Cada `git push` a la rama principal vuelve a publicar el sitio.
+El sitio está publicado en **https://mateo-avila.vercel.app** (proyecto `mateo-avila` en Vercel, conectado a este repositorio).
+
+Para publicar cambios no hay que hacer nada en Vercel: cada `git push` a la rama `main` vuelve a desplegar el sitio solo.
 
 El archivo `vercel.json` redirige todas las rutas a `index.html`, así `/blog/algun-articulo` funciona aunque recargues la página.
 
-Cuando tengas la URL final, reemplazá `https://mateo-avila.vercel.app` en: `src/data/site.js`, `index.html`, `public/robots.txt` y `public/sitemap.xml`.
+Si algún día conectás un dominio propio, cambiá la URL en `src/data/site.js`, `index.html`, `public/robots.txt` y `public/sitemap.xml`.
 
 ## Dónde editar cada cosa
 

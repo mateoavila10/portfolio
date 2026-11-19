@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- [COMPLETAR] Cambiá el dominio si usás uno propio. Al publicar un artículo nuevo, agregá su URL acá. -->
+<!-- Al publicar un artículo nuevo, agregá su URL acá. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mateo-avila.vercel.app/</loc></url>
   <url><loc>https://mateo-avila.vercel.app/blog</loc></url>

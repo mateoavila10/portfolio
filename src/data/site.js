@@ -7,7 +7,7 @@ export const site = {
   role: 'Desarrollador Full-Stack',
   tagline: 'Desarrollador Full-Stack que también automatiza procesos con IA.',
   location: 'Tucumán, Argentina',
-  // [COMPLETAR] cambiá esta URL cuando tengas el dominio final de Vercel
+  // URL pública del sitio (si conectás un dominio propio, cambiala acá)
   url: 'https://mateo-avila.vercel.app',
   email: 'mateoavilaa18@gmail.com',
   github: 'https://github.com/mateoavila10',
