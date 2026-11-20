@@ -1,4 +1,4 @@
-import { ArrowUpRight, Lock } from './Icons.jsx'
+import { ArrowUpRight, GitHub, Lock } from './Icons.jsx'
 import ProjectMedia from './ProjectMedia.jsx'
 import Tag from './Tag.jsx'
 
@@ -48,18 +48,33 @@ export default function ProjectCard({ project, index }) {
           ))}
         </ul>
 
-        {project.url && (
-          <div className="mt-7 lg:mt-auto lg:pt-7">
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-bg transition-transform hover:-translate-y-0.5"
-            >
-              {project.urlLabel || 'Visitar'}
-              <ArrowUpRight width={16} height={16} />
-              <span className="sr-only">(se abre en una pestaña nueva)</span>
-            </a>
+        {/* Botones: sitio publicado (principal) y código en GitHub (secundario). Cada uno aparece solo si tiene link. */}
+        {(project.url || project.repoUrl) && (
+          <div className="mt-7 flex flex-wrap gap-3 lg:mt-auto lg:pt-7">
+            {project.url && (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-bg transition-transform hover:-translate-y-0.5"
+              >
+                {project.urlLabel || 'Visitar sitio'}
+                <ArrowUpRight width={16} height={16} />
+                <span className="sr-only">(se abre en una pestaña nueva)</span>
+              </a>
+            )}
+            {project.repoUrl && (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-ink/25 px-5 py-2.5 text-sm font-medium transition-colors hover:border-ink"
+              >
+                <GitHub width={16} height={16} />
+                Ver código
+                <span className="sr-only">en GitHub (se abre en una pestaña nueva)</span>
+              </a>
+            )}
           </div>
         )}
       </div>

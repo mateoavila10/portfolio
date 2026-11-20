@@ -6,9 +6,10 @@
 //   description párrafo corto
 //   features    lista de funciones destacadas
 //   tags        tecnologías
-//   private     true = código privado (muestra la etiqueta y no muestra botón)
-//   url         link para visitar (dejalo vacío si no hay)
-//   urlLabel    texto del botón
+//   private     true = código privado (muestra la etiqueta "Código privado")
+//   url         link al sitio publicado (dejalo vacío si no hay): botón principal
+//   urlLabel    texto del botón principal (por defecto "Visitar sitio")
+//   repoUrl     link al código en GitHub (opcional): botón secundario "Ver código"
 //   image       ruta a una captura dentro de /public/projects (ej: '/projects/padel.webp').
 //               Si está vacío, se muestra un placeholder.
 
@@ -78,6 +79,7 @@ export const projects = [
     private: false,
     url: 'https://sinergia-rent-a-car.vercel.app',
     urlLabel: 'Visitar sitio',
+    repoUrl: 'https://github.com/mateoavila10/Sinergia-Rent-a-Car',
     image: '/projects/sinergia-rent-a-car.webp',
   },
 ]
