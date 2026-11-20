@@ -76,8 +76,8 @@ export const projects = [
     ],
     tags: ['React', 'Vite', 'React Router', 'Node.js', 'Express', 'MySQL'],
     private: false,
-    url: 'https://github.com/mateoavila10/Sinergia-Rent-a-Car',
-    urlLabel: 'Ver código en GitHub',
+    url: 'https://sinergia-rent-a-car.vercel.app',
+    urlLabel: 'Visitar sitio',
     image: '/projects/sinergia-rent-a-car.webp',
   },
 ]
